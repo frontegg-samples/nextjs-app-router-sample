@@ -1,18 +1,21 @@
-import Welcome from "@/components/Welcome";
+import AccountInfo from "@/components/AccountInfo";
 import { getAppUserSession } from "@frontegg/nextjs/app";
 import { redirect } from "next/navigation";
 
-export default async function Home() {
+const AccountPage = async () => {
   const userSession = await getAppUserSession();
 
-  if (userSession) {
-    redirect("/account");
+  if (!userSession) {
+    redirect("/");
   }
+
   return (
     <main>
       <section className="section-screen">
-        <Welcome/>
+        <AccountInfo />
       </section>
     </main>
   );
-}
+};
+
+export default AccountPage;
