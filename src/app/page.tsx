@@ -8,9 +8,12 @@ export default async function Home() {
   if (userSession) {
     redirect("/account");
   }
+
+  const isHosted = process.env.FRONTEGG_HOSTED_LOGIN === "true";
+  
   return (
     <main>
-      <Welcome />
+      <Welcome isHosted={isHosted} />
     </main>
   );
 }

@@ -1,10 +1,22 @@
 "use client";
 import { useLoginWithRedirect } from "@frontegg/nextjs";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
-const Welcome = () => {
+interface WelcomeProps {
+  isHosted: boolean;
+}
+const Welcome = (props: WelcomeProps) => {
   const loginWithRedirect = useLoginWithRedirect();
+  const router = useRouter();
 
+  const login = () => {
+    if (props.isHosted) {
+      loginWithRedirect();
+    } else {
+      router.push("/account/login");
+    }
+  };
   return (
     <section className="section-screen">
       <div className="section-card welcome-card">
@@ -16,7 +28,7 @@ const Welcome = () => {
             our authentication flows.
           </p>
         </div>
-        <button className="primary-button" onClick={() => loginWithRedirect()}>
+        <button className="primary-button" onClick={login}>
           Sign in
         </button>
       </div>
