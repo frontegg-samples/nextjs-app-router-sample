@@ -10,9 +10,7 @@ export default async function Home() {
   }
   return (
     <main>
-      <section className="section-screen">
-        <Welcome/>
-      </section>
+      <Welcome />
     </main>
   );
 }

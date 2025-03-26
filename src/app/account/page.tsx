@@ -11,9 +11,7 @@ const AccountPage = async () => {
 
   return (
     <main>
-      <section className="section-screen">
-        <AccountInfo />
-      </section>
+      <AccountInfo />
     </main>
   );
 };
