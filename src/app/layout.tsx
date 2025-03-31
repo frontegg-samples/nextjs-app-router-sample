@@ -17,8 +17,8 @@ export const metadata: Metadata = {
 
 const DEFAULT_SANDBOX_CONTEXT = {
   baseUrl: "https://sandbox.frontegg.com",
-  clientId: "9af126b9-c35f-4e2d-a3f1-c261e22aaf4a",
-  appId: "xxxx",
+  hostedAppId: "da398ff8-c069-428e-974a-afcded8c0c04",
+  embeddedAppId: "ad6012f5-905f-430e-ad0d-64e85f0ba6c7",
 };
 
 export default function RootLayout({
@@ -40,8 +40,10 @@ export default function RootLayout({
             isDefaultCredentials={
               process.env.FRONTEGG_BASE_URL ===
                 DEFAULT_SANDBOX_CONTEXT.baseUrl &&
-              process.env.FRONTEGG_CLIENT_ID ===
-                DEFAULT_SANDBOX_CONTEXT.clientId
+              (process.env.FRONTEGG_APP_ID ===
+                DEFAULT_SANDBOX_CONTEXT.hostedAppId ||
+                process.env.FRONTEGG_APP_ID ===
+                  DEFAULT_SANDBOX_CONTEXT.embeddedAppId)
             }
           />
         </FronteggAppProvider>
