@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import { AdminPortal, useAuth } from "@frontegg/nextjs";
 import getInitials from "../utils/getInitials";
 import TenantInfo from "./TenantInfo";
@@ -16,7 +16,7 @@ const AccountInfo = () => {
     user && user.profilePictureUrl ? (
       <Image
         src={user.profilePictureUrl}
-        alt="Welcome"
+        alt={user.name}
         width={24}
         height={24}
         onError={(e: React.SyntheticEvent<HTMLImageElement>) => {
