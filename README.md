@@ -6,7 +6,7 @@ This sample showcases how to seamlessly add authentication and user management t
 
 ## This app showcases
 
-- Redirect users to Frontegg’s embedded login
+- Redirect users to Frontegg’s hosted or embedded login
 - Enable a fully integrated self-service portal
 - Manage and track user authentication state
 - Access and display user profile details
@@ -43,7 +43,7 @@ If you're using your own credentials, follow the guidelines below.
 
 ### 2. Configure environment variables -
 
-Update the `.env.local` file in the root directory with your Frontegg credentials. Then, choose your preferred login mode by setting `FRONTEGG_HOSTED_LOGIN` to false for embedded login. By default, the Frontegg sandbox environment runs in hosted mode.
+Update the `.env.local` file in the root directory with your Frontegg credentials. Then, choose your preferred login mode by setting `FRONTEGG_HOSTED_LOGIN` to `false` for embedded login. By default, the Frontegg sandbox environment runs in hosted mode.
 
 ```env
 FRONTEGG_BASE_URL=<YOUR_BASE_URL>
