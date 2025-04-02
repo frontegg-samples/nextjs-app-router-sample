@@ -1,8 +1,8 @@
 "use client";
 import { AdminPortal, useAuth } from "@frontegg/nextjs";
+import Image from "next/image";
 import getInitials from "../utils/getInitials";
 import TenantInfo from "./TenantInfo";
-import Image from "next/image";
 
 const AccountInfo = () => {
   const { user } = useAuth();

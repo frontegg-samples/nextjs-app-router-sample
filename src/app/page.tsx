@@ -2,11 +2,11 @@ import Welcome from "@/components/Welcome";
 import { getAppUserSession } from "@frontegg/nextjs/app";
 import { redirect } from "next/navigation";
 
-export default async function Home() {
+export default async function WelcomePage() {
   const userSession = await getAppUserSession();
-
+  console.log('main', userSession)
   if (userSession) {
-    redirect("/account");
+    redirect("/home");
   }
 
   const isHosted = process.env.FRONTEGG_HOSTED_LOGIN === "true";
