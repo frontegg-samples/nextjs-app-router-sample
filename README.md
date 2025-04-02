@@ -2,7 +2,7 @@
 
 # Next.js App Router sample
 
-This sample showcases how to seamlessly add authentication and user management to your React app using Frontegg’s embedded login method.
+This sample showcases how to seamlessly add authentication and user management to your Next.js app using Frontegg’s hosted or embedded login methods.
 
 ## This app showcases
 
