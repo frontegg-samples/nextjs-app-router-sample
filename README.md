@@ -38,9 +38,10 @@ If you're using your own credentials, follow the guidelines below.
 1. Go to [Frontegg Portal](https://portal.frontegg.com/)
 2. Get your application ID from [ENVIRONMENT] → Applications
 3. Get your Frontegg domain from the Frontegg Portal → [ENVIRONMENT] → Keys & domains
-4. This sample runs on `http://localhost:3000`. You may need to add `http://localhost:3000` under → [ENVIRONMENT] → Keys & domains → Allowed origins
+4. This sample runs on `http://localhost:3000`. If your application uses a different port, make sure to add `http://localhost:3000` under → [ENVIRONMENT] → Authentication → Login method → Redirect URLs
+5. This sample runs on `http://localhost:3000`. You may need to add `http://localhost:3000` under → [ENVIRONMENT] → Keys & domains → Allowed origins
 
-### 2. Configure environment variables
+### 2. Configure environment variables -
 
 Update the `.env.local` file in the root directory with your Frontegg credentials. Then, choose your preferred login mode by setting `FRONTEGG_HOSTED_LOGIN` to false for embedded login. By default, the Frontegg sandbox environment runs in hosted mode.
 
@@ -68,21 +69,10 @@ Run the following command:
 npm install
 ```
 
-### 5. Run the Application
+### 5. Run the application -
 
 ```bash
 npm run dev
-```
-
-The app will be available at [http://localhost:3000](http://localhost:3000).
-
-
-### 4. Run the application -
-
-To start the application, run:
-
-```bash
-npm start
 ```
 
 That’s it — you're all set!
