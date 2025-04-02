@@ -1,4 +1,4 @@
-import { FronteggAppRouter } from '@frontegg/nextjs/app';
+import { FronteggAppRouter } from "@frontegg/nextjs/app";
 
-// This is specifically for auth-related routes
+// Integrates Frontegg's routes into Next.js
 export default FronteggAppRouter;
