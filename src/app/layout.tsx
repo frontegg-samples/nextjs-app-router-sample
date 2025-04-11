@@ -4,6 +4,7 @@ import "./globals.css";
 import { FronteggAppProvider } from "@frontegg/nextjs/app";
 import Header from "@/components/Header";
 import SignupBanner from "@/components/SignupBanner";
+import AppLoader from "@/components/AppLoader";
 
 const manrope = Manrope({
   variable: "--font-manrope",
@@ -33,7 +34,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${manrope.className}`}>
-        <FronteggAppProvider authOptions={authOptions}>
+        <FronteggAppProvider authOptions={authOptions} customLoader={true}>
           <Header />
           {children}
           <SignupBanner
@@ -46,6 +47,7 @@ export default function RootLayout({
                   DEFAULT_SANDBOX_CONTEXT.embeddedAppId)
             }
           />
+          <AppLoader />
         </FronteggAppProvider>
       </body>
     </html>
