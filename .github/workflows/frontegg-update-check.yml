@@ -33,11 +33,11 @@ jobs:
         id: check-updates
         run: |
           # Get current version from package.json
-          CURRENT_VERSION=$(node -p "require('./package.json').dependencies['@frontegg/vue'].replace('^', '')")
-          echo "Current @frontegg/vue version: $CURRENT_VERSION"
+          CURRENT_VERSION=$(node -p "require('./package.json').dependencies['@frontegg/nextjs'].replace('^', '')")
+          echo "Current @frontegg/nextjs version: $CURRENT_VERSION"
           # Get latest version from npm registry
-          LATEST_VERSION=$(npm view @frontegg/vue version)
-          echo "Latest @frontegg/vue version: $LATEST_VERSION"
+          LATEST_VERSION=$(npm view @frontegg/nextjs version)
+          echo "Latest @frontegg/nextjs version: $LATEST_VERSION"
           # Compare versions and set output
           if [ "$CURRENT_VERSION" != "$LATEST_VERSION" ]; then
             echo "update_available=true" >> $GITHUB_OUTPUT
